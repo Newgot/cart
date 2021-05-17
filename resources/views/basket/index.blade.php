@@ -37,10 +37,30 @@
             </div>
         </div>
     @endforeach
+    <h3>@lang('messages.sum') {{ $allPrice }} @lang('messages.currency')</h3>
     </div>
     <form action="{{route('sendMail')}}" method="POST" class="mail">
         @csrf
-        <h3>@lang('messages.sum') {{ $allPrice }} @lang('messages.currency')</h3>
+        <p>
+            @lang('messages.f_name'): 
+            <input type="text" name="f_name" value="{{old('f_name')}}">
+        </p>
+        <p>
+            @lang('messages.l_name'):
+            <input type="text" name="l_name" value="{{old('l_name')}}">
+        </p>
+        <p>
+            @lang('messages.patronymic'):
+            <input type="text" name="patronymic" value="{{old('patronymic')}}">
+        </p>
+        <p>
+            @lang('messages.tel'):
+            <input type="text" name="tel" value="{{old('tel')}}">
+        </p>
+        <p>
+            @lang('messages.comment')
+            <input type="text" name="comment" value="{{old('comment')}}">
+        </p>
         <div class="row">
             <p>@lang('messages.mail') :</p>
             <input class="col-4" name="mail" type="text" value="{{old('mail')}}">

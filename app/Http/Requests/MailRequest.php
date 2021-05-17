@@ -24,7 +24,10 @@ class MailRequest extends FormRequest
     public function rules()
     {
         return [
-            'mail' => 'email:rfc,dns'
+            'f_name' => 'required',
+            'l_name' => 'required',
+            'tel' => 'numeric',
+            'mail' => 'required|email:rfc,dns'
         ];
     }
 }

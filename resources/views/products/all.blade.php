@@ -11,6 +11,7 @@
                     <div class="product border" id='{{$product['idProduct']}}'>
                         <h3>{{$product['nameProduct']}}</h3>
                         <img src="/storage/images/{{$product['image']}}" alt="">
+                        <p>{{$product['description']}}</p>
                         <h4>{{$product['price']}} @lang('messages.currency')</h4>
                         <div class="btn btn-danger product-btn" 
                         data-id="{{$product['idProduct']}}"

@@ -62,10 +62,17 @@ class BasketController extends Controller
 
     public function sendMail(MailRequest $request)
     {
+        $info = [];
+        $info['f_name'] = $request->f_name;
+        $info['l_name'] = $request->l_name;
+        $info['patronymic'] = $request->patronymic;
+        $info['tel'] = $request->tel;
+        $info['comment'] = $request->comment;
+
         $products = Cart::session(1)->getContent()->toArray();
         $sum = Cart::session(1)->getTotal();
         $email = $request->mail;
-        Mail::to($email)->send(new OrderCreated($sum, $products));
+        Mail::to($email)->send(new OrderCreated($sum, $products, $info));
         return redirect(route('home'));
     }
 }
