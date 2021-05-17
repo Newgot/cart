@@ -73,6 +73,7 @@ class BasketController extends Controller
         $sum = Cart::session(1)->getTotal();
         $email = $request->mail;
         Mail::to($email)->send(new OrderCreated($sum, $products, $info));
+        Cart::session(1)->clear();
         return redirect(route('home'));
     }
 }
