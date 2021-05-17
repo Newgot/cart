@@ -1,0 +1,45 @@
+.navbar-light .navbar-nav .nav-link{
+    color: #FFF;
+}
+
+.home-products{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.product {
+    padding-top: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product h3,
+.product h4{
+    text-align: center;
+}
+
+.product .qty{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.product .qty p{
+    margin: 0;
+}
+
+.mail input{
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.add-product,
+.add-category{
+    margin-top: 30px;
+}
+.add-product .btn,
+.add-category .btn{
+    margin-top: 15px;
+}
